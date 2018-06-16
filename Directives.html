@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+   <head>
+      <title>Select sweet you like</title>
+   </head>
+
+   <body >
+     <div ng-app = "" ng-init = "sweets =[{type:'cold',name:'Ice creame'},{type:'hot',name:'rabadi'},{type:'hot',name:'halwa'},{type:'cold',name:'kaju katali'},]">
+       <p>We have following sweets:</p>
+       <ol>
+         <li ng-repeat = "sweet in sweets">
+           {{ 'Sweet Name: ' + sweet.name + ', Type: ' + sweet.type }}
+         </li>
+       </ol>
+
+      <p>Which Sweet you like ?: <input type="text" ng-model = "name"></p>
+      <p> Yummy  <span ng-bind = "name"> </span>!!!!</p>
+
+    </div>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+   </body>
+</html>

@@ -1,3 +1,2 @@
 Learning JS
 # AngularJSStudy
-# AngularJSStudy
