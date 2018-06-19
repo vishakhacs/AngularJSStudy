@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+   <head>
+      <title>Lets calculate addition</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+   </head>
+
+   <body >
+     <div ng-app = "mainApp" ng-controller = "empController">
+       Enter your name: <input type="text" ng-model = "emp.name"><br><br>
+       Enter your address: <input type="text" ng-model = "emp.address"><br><br>
+
+      your details :{{emp.name}}
+
+    </div>
+    <script>
+      var mainApp = angular.module("mainApp", []);
+
+      mainApp.controller('empController', function($scope)){
+        $scope.emp = {
+          name: "Sam",
+          address: "New York",
+
+          details: function() {
+            var empObj;
+            empObj = $scope.emp;
+            return empObj.name + " " + empObj.address;
+          }
+        };
+      });
+    </script>
+   </body>
+</html>
